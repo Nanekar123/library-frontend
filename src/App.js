@@ -1,24 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Login from "./pages/Login";
+import Books from "./pages/Books";
+import IssueHistory from "./pages/IssueHistory";
+import Dashboard from "./pages/Dashboard";
+
+import Navbar from "./components/Navbar";
+import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+
+      <Routes>
+
+        {/* Login Page */}
+        <Route path="/" element={<Login />} />
+
+        {/* Protected Pages */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <>
+                <Navbar />
+                <Dashboard />
+              </>
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/books"
+          element={
+            <ProtectedRoute>
+              <>
+                <Navbar />
+                <Books />
+              </>
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/history"
+          element={
+            <ProtectedRoute>
+              <>
+                <Navbar />
+                <IssueHistory />
+              </>
+            </ProtectedRoute>
+          }
+        />
+
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
