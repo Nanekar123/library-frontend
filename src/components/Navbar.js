@@ -1,53 +1,64 @@
 import { Link, useNavigate } from "react-router-dom";
 
-function Navbar() {
-  const navigate = useNavigate();
+function Navbar(){
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/");
-  };
+const navigate=useNavigate();
 
-  return (
-    <nav style={styles.navbar}>
-      <h2 style={styles.logo}>Library System</h2>
+const logout=()=>{
 
-      <div>
-        <Link to="/dashboard" style={styles.link}>Dashboard</Link>
-        <Link to="/books" style={styles.link}>Books</Link>
-        <Link to="/history" style={styles.link}>Issue History</Link>
+localStorage.removeItem("token");
+navigate("/login");
 
-        <button onClick={handleLogout} style={styles.button}>
-          Logout
-        </button>
-      </div>
-    </nav>
-  );
+};
+
+return(
+
+<nav style={nav}>
+
+<h3 style={{color:"gold"}}>📚 Library</h3>
+
+<div>
+
+<Link to="/books" style={link}>
+Books
+</Link>
+
+<Link to="/history" style={link}>
+Issue History
+</Link>
+
+</div>
+
+<button onClick={logout} style={btn}>
+Logout
+</button>
+
+</nav>
+
+);
+
 }
 
-const styles = {
-  navbar: {
-    display: "flex",
-    justifyContent: "space-between",
-    padding: "15px",
-    backgroundColor: "#282c34",
-    color: "white",
-  },
-  logo: {
-    margin: 0,
-  },
-  link: {
-    color: "white",
-    marginRight: "20px",
-    textDecoration: "none",
-  },
-  button: {
-    padding: "6px 12px",
-    backgroundColor: "red",
-    border: "none",
-    color: "white",
-    cursor: "pointer",
-  },
+const nav={
+display:"flex",
+justifyContent:"space-between",
+alignItems:"center",
+background:"#111",
+padding:"15px 30px"
+};
+
+const link={
+color:"gold",
+marginRight:"20px",
+textDecoration:"none"
+};
+
+const btn={
+background:"gold",
+border:"none",
+padding:"8px 16px",
+borderRadius:"6px",
+cursor:"pointer"
 };
 
 export default Navbar;
