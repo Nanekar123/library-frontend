@@ -2,28 +2,43 @@
 
 ## Overview
 
-The Library Management System Frontend is a React-based web application that provides an interactive interface for managing library operations.
+The **Library Management System Frontend** is a React-based web application that provides a user interface for interacting with the digital library platform.
 
-The system supports three primary roles:
+The application supports three roles:
 
-* Admin
-* Author
 * Reader
+* Author
+* Admin
 
-Each role has its own dashboard and features.
+Each role has its own dashboard and capabilities.
 
-The frontend communicates with the backend REST APIs to perform authentication, book management, issue tracking, reviews, and analytics.
+The frontend communicates with backend APIs to manage books, authentication, issues, analytics, and reviews.
 
 ---
 
 ## Tech Stack
 
 * React.js
-* JavaScript (ES6+)
+* JavaScript (ES6)
 * React Router
 * Axios
 * HTML5
 * CSS3
+
+---
+
+## System Architecture
+
+```
+React Frontend
+      │
+      │ REST API Calls
+      ▼
+Node.js / Express Backend
+      │
+      ▼
+MySQL Database
+```
 
 ---
 
@@ -50,39 +65,16 @@ library-frontend
 
 ---
 
-## Features
+## Key Features
 
-### Authentication
-
-* User registration
-* Login functionality
-* OTP verification
+* User authentication
 * Protected routes
-
-### Reader Features
-
-* Browse books
-* Issue books
-* View issue history
-* Manage personal dashboard
-
-### Admin Features
-
+* Book browsing interface
+* Issue history tracking
+* Author manuscript submission
 * Admin dashboard
-* Manage authors
-* Monitor library operations
-* View analytics
-
-### Author Features
-
-* Author dashboard
-* Submit manuscripts
-* Manage author content
-
-### API Integration
-
-* Axios based API layer
-* Backend REST API integration
+* Analytics interface
+* Responsive UI components
 
 ---
 
@@ -139,13 +131,13 @@ Install dependencies
 npm install
 ```
 
-Start development server
+Run development server
 
 ```
 npm start
 ```
 
-Application runs at:
+Application runs at
 
 ```
 http://localhost:3000
@@ -155,7 +147,7 @@ http://localhost:3000
 
 ## Backend API
 
-Backend repository:
+Backend repository
 
 https://github.com/Nanekar123/library-backend
 
@@ -165,5 +157,5 @@ https://github.com/Nanekar123/library-backend
 
 Supriya Nanekar
 
-GitHub:
+GitHub
 https://github.com/Nanekar123
