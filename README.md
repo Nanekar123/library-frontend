@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+# Library Management System – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Library Management System Frontend is a web interface built using **React.js** that allows users to interact with the library platform.
 
-In the project directory, you can run:
+It provides different dashboards and interfaces for:
 
-### `npm start`
+* Readers
+* Authors
+* Administrators
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The frontend communicates with the backend APIs to manage books, user authentication, issue tracking, ratings, and other library operations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* React.js
+* JavaScript (ES6+)
+* React Router
+* Axios
+* HTML5
+* CSS3
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src
+│
+├── components
+│   ├── Navbar.js
+│   ├── BookCard.js
+│   └── ProtectedRoute.js
+│
+├── pages
+│   ├── Welcome.js
+│   ├── Login.js
+│   ├── Register.js
+│   ├── VerifyOtp.js
+│   ├── Books.js
+│   ├── IssueHistory.js
+│   ├── AdminDashboard.js
+│   └── AuthorDashboard.js
+│
+├── services
+│   └── api.js
+│
+├── App.js
+└── index.js
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Authentication
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* User registration
+* Login functionality
+* OTP verification
+* Protected routes for authenticated users
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Reader Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Browse books
+* View issued books
+* Track issue history
 
-## Learn More
+### Admin Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Admin dashboard
+* Manage authors
+* Monitor library operations
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Author Features
 
-### Code Splitting
+* Author dashboard
+* Manuscript submission
+* Track author content
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### API Integration
 
-### Analyzing the Bundle Size
+* Axios based API service layer
+* Integration with backend REST APIs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Clone repository
 
-### Advanced Configuration
+```
+git clone https://github.com/Nanekar123/library-frontend.git
+cd library-frontend
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Install dependencies
 
-### Deployment
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Start development server
 
-### `npm run build` fails to minify
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Application will run at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Backend API
+
+This frontend connects to the backend API:
+
+https://github.com/Nanekar123/library-backend
+
+---
+
+## Future Improvements
+
+* Responsive UI enhancements
+* Advanced search filters
+* Book recommendations
+* Admin analytics dashboard
+
+---
+
+## Author
+
+Supriya Nanekar
+
+GitHub:
+https://github.com/Nanekar123
